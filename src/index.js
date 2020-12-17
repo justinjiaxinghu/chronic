@@ -74,7 +74,7 @@ class Window extends React.Component {
 
 function App() {
     return (
-        <div>
+        <div className = "parent">
             <Switch>
                 <Route path = "/test" component = {PageScreen}/>
                 <Route path = "/">
@@ -84,7 +84,6 @@ function App() {
         </div>
     )
 }
-
 
 ReactDOM.render(
     <Router>

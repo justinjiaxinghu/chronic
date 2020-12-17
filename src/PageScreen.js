@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
+import page from './resources/1.PNG';
+import './page_selection.css';
 import {
     BrowserRouter as Router,
     Switch,
@@ -68,7 +70,7 @@ class PassageWindow extends React.Component {
   
 export default function PageScreen() {
     return (
-		<div style = {{margin: "20px"}}>
+		<div className = "parent" style = {{margin: "20px"}}>
 			<div style = {{marginBottom: "20px"}}>
 				<Card className = "hoverable" bg = "light" text = "dark"> 
 					<Link to = "/" style = {{textDecoration : "none", color : "black"}}>
@@ -82,8 +84,9 @@ export default function PageScreen() {
 					</Link>
 				</Card>
 			</div>
-			<div style = {{margin: "20px"}}>
-				<PassageWindow/>
+			<div className = "parent" style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+				{/* <PassageWindow/> */}
+				<img className = "ind_page" src = {page}/>
 			</div>
 		</div>
 	)

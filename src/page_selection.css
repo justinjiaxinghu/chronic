@@ -42,3 +42,12 @@
     box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
 }
+
+.ind_page {
+    width: 50%;
+}
+
+.parent {
+    height: 100vh;
+    width: 100vw;
+}
