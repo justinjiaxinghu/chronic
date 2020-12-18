@@ -16,7 +16,7 @@ var rows = [];
 var cols = [];
 var total = [];
 var count = 1;
-for (var i = 1; i <= 4; i++) {
+for (var i = 1; i <= 50; i++) {
     rows.push(i);
 }
 for (var i = 0; i < 4; i++) {
