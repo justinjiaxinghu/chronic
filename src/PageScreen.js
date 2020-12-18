@@ -5,7 +5,9 @@ import {
     Link
   } from "react-router-dom";
 import { Component } from 'react';
-import rotateButton from './resources/rotatebutton.jpg'
+import rotateButton from './resources/rotatebutton.jpg';
+
+var degrees = 0;
   
 export default class PageScreen extends Component {
 
@@ -16,15 +18,11 @@ export default class PageScreen extends Component {
 		}
 	}
 
+	
 	handleClick() {
-		var rotate_state = this.state;
 		var icon = document.getElementById("rotate_button");
-		if (rotate_state) {
-			icon.className = "ind_page_rotate";
-		} else {
-			icon.className = "ind_page";
-		}
-		//this.setState({rotate : !rotate_state});
+		degrees -= 20;
+		icon.style.transform = "rotate(" + degrees + "deg)";
 	}
 
 	render() {
