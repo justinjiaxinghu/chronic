@@ -26,7 +26,7 @@ export default class PageScreen extends Component {
 	}
 
 	render() {
-		
+		degrees = 0;
 		return (
 			<div className = "parent" style = {{margin: "20px"}}>
 				<div style = {{marginBottom: "20px"}}>
