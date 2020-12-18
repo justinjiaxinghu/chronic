@@ -11,12 +11,24 @@ export default class PageScreen extends Component {
 
 	constructor (props) {
 		super(props);
+		this.state = {
+			rotate: false
+		}
 	}
+
 	handleClick() {
-		console.log("hello");
+		var rotate_state = this.state;
+		var icon = document.getElementById("rotate_button");
+		if (rotate_state) {
+			icon.className = "ind_page_rotate";
+		} else {
+			icon.className = "ind_page";
+		}
+		//this.setState({rotate : !rotate_state});
 	}
 
 	render() {
+		
 		return (
 			<div className = "parent" style = {{margin: "20px"}}>
 				<div style = {{marginBottom: "20px"}}>
@@ -33,10 +45,10 @@ export default class PageScreen extends Component {
 					</Card>
 				</div>
 				<div>
-					<img alt = "" src = {rotateButton} style = {{width: "80px", height: "80px"}} onClick={() => this.handleClick()}/>
+					<img alt = "" src = {rotateButton} style = {{width: "80px", height: "80px"}} onClick={() => this.handleClick()} />
 				</div>
 				<div className = "parent_image">
-					<img alt = "" src = {require('./resources/' + this.props.match.params.id + '.jpg').default} className = "ind_page"/>
+					<img alt = "" src = {require('./resources/' + this.props.match.params.id + '.jpg').default} className = "ind_page" id = "rotate_button"/>
 				</div>
 			</div>
 		)
