@@ -14,25 +14,28 @@ import {
 
 var rows = [];
 var cols = [];
+var total = [];
 var count = 1;
-for (var i = 1; i <= 4; i++) {
+for (var i = 1; i <= 50; i++) {
     rows.push(i);
 }
 for (var i = 0; i < 4; i++) {
     cols.push(i);
+}
+for (var i = 0; i < rows.length; i++) {
+    total.push(i + 1);
 }
 
 class PageButton extends React.Component {
     render () {
         return (
             <Card className = "hoverable" bg = "light" text = "dark"> 
-                    <Link to = "/test" style = {{textDecoration : "none", color : "black"}}>
+                    <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>
                         <Card.Body>
                             <Card.Title>
                                 Page
                             </Card.Title>
                             <Card.Text>
-                                {console.log(count)}
                                 {count++}
                             </Card.Text>
                         </Card.Body>
@@ -74,9 +77,9 @@ class Window extends React.Component {
 
 function App() {
     return (
-        <div>
+        <div className = "parent">
             <Switch>
-                <Route path = "/test" component = {PageScreen}/>
+                <Route path = "/:id" component = {PageScreen}/>
                 <Route path = "/">
                     <Window/>
                 </Route>
@@ -84,7 +87,6 @@ function App() {
         </div>
     )
 }
-
 
 ReactDOM.render(
     <Router>
