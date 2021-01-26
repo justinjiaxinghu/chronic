@@ -14,6 +14,22 @@ export default class PageScreen extends Component {
 			return (
 				<All.PageScreen2/>
 			)
+		} else if (this.props.match.params.id == "page3") {
+			return (
+				<All.PageScreen3/>
+			)
+		} else if (this.props.match.params.id == "page4") {
+			return (
+				<All.PageScreen4/>
+			)
+		} else if (this.props.match.params.id == "page5") {
+			return (
+				<All.PageScreen5/>
+			)
+		} else if (this.props.match.params.id == "page6") {
+			return (
+				<All.PageScreen6/>
+			)
 		}
 	}
 }

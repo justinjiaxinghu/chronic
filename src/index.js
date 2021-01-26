@@ -28,22 +28,23 @@ for (var i = 0; i < rows.length; i++) {
 
 class PageButton extends React.Component {
     render () {
-        if (count == 1) { //this conditional is temporary. once we get all the icons loaded in, we can remove this if check and simply use the block of code below
-            return (
-                <Card className = "hoverable" bg = "light" text = "dark"> 
-                    <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>
-                        <Card.Img src = {require("./resources/page" + count + ".jpg").default} alt = "Card Image"/>
-                            {/* <Card.ImgOverlay> */}
-                            <Card.Body>
-                                <Card.Title>
-                                    {"Page " + count++}
-                                </Card.Title>
-                            </Card.Body>
-                            {/* </Card.ImgOverlay> */}
-                        </Link>
-                </Card>
-            )
-        }
+        //reference this code for icon background
+        // if (count == 1) { 
+        //     return (
+        //         <Card className = "hoverable" bg = "light" text = "dark"> 
+        //             <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>
+        //                 <Card.Img src = {require("./resources/page" + count + ".png").default} alt = "Card Image"/> <--here
+        //                     {/* <Card.ImgOverlay> */}                                                               <-- here
+        //                     <Card.Body>
+        //                         <Card.Title>
+        //                             {"Page " + count++}
+        //                         </Card.Title>
+        //                     </Card.Body>
+        //                     {/* </Card.ImgOverlay> */}
+        //                 </Link>
+        //         </Card>
+        //     )
+        // }
         return (
             <Card className = "hoverable" bg = "light" text = "dark"> 
                     <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>

@@ -5,6 +5,7 @@
 
 .ind_page {
     transition: transform 0.5s linear;
+    width: 50%;
     max-width: 100%;
     max-height: 100%;
 }
