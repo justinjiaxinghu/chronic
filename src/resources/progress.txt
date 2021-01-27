@@ -5,3 +5,6 @@ strawberry
 celebrate
 dance
 new places
+unexpected
+MISSING: dates
+birthday
