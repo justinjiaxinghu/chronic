@@ -16,13 +16,19 @@ dress
 MISSING: MISSING
 spoon river
 faking 
-MISSING: lost
-MISSING: walking
-MISSING: shattered
-MISSING: wheelchair
-MISSING: jesus
-MISSING: never
-MISSING: rabbit
-MISSING: marijuana
-MISSING: world
+lost
+walking
+shattered
+wheelchair
+jesus
+never
+rabbit
+marijuana
+world
 MISSING: eyesight
+flexible
+retrained
+signs 
+faceblind 
+cd
+perception
