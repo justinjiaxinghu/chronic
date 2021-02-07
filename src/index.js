@@ -5,12 +5,10 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './page_selection.css';
 import PageScreen from './PageScreen';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 var rows = [];
 var cols = [];
@@ -46,7 +44,7 @@ class PageButton extends React.Component {
         //     )
         // }
         return (
-            <Card className = "hoverable" bg = "light" text = "dark"> 
+            <Card className = "hoverable" bg = "light" text = "dark">
                     <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>
                         {/* <Card.Img src = {require("./resources/page_" + count + "_icon.png").default} alt = "Card Image"/> */}
                         {/* <Card.ImgOverlay> */}
@@ -82,7 +80,7 @@ class Window extends React.Component {
         return (
             <div>
                 {rows.map((num) => (
-                    <div key = {num} style = {{margin : "20px"}}> 
+                    <div key = {num} style = {{margin : "20px"}}>
                         <Pages/>
                     </div>
                 ))}
@@ -95,14 +93,22 @@ class Window extends React.Component {
 function App() {
     return (
         <div className = "parent">
+            <Router>
+                <Navbar/>
+            <Switch>
+                <Route path='/about' component={About} />
+                <Route path='/contact-us' component={Contact} />
+            </Switch>
+
             <Switch>
                 <Route path = "/:id" component = {PageScreen}/>
                 <Route path = "/">
                     <Window/>
                 </Route>
             </Switch>
-        </div>
-    )
+            </Router>
+            </div>
+)
 }
 
 ReactDOM.render(
