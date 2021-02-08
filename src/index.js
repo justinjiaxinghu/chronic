@@ -90,24 +90,36 @@ class Window extends React.Component {
     }
 }
 
+const p_size = {
+    fontFamily: "fantasy",
+    display: "flex",
+    color: "red",
+    justifyContent: "center",
+    alignItems: "center"
+}
+
 function App() {
     return (
         <div className = "parent">
             <Router>
                 <Navbar/>
+                {/*<About/>*/}
+                {/*<Contact/>*/}
+            {/*<Switch>*/}
+            {/*    <Route path='/contact-us' component={Contact} />*/}
+            {/*</Switch>*/}
             <Switch>
                 <Route path='/about' component={About} />
                 <Route path='/contact-us' component={Contact} />
-            </Switch>
 
-            <Switch>
                 <Route path = "/:id" component = {PageScreen}/>
                 <Route path = "/">
                     <Window/>
                 </Route>
             </Switch>
             </Router>
-            </div>
+            <p style={p_size}>Designed by Georgia Tech Nerds</p>
+        </div>
 )
 }
 
