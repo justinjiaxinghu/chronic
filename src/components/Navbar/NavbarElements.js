@@ -7,7 +7,8 @@ export const Nav = styled.nav`
   height: 135px;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((55vw - 1000px) / 2);
+  /* padding: 0.5rem calc((100vw - 1000px) / 2); */
+  padding: 0.6rem calc((75vw - 1000px) / 5.4);
   z-index: 10;
   /* Third Nav */
   /* justify-content: flex-start; */
@@ -20,6 +21,7 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  // width: 200%;
   cursor: pointer;
   &.active {
     color: #24fc15;
@@ -44,12 +46,15 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -24px;
+  
+  
   /* Second Nav */
   /* margin-right: 24px; */
   /* Third Nav */
   /* width: 100vw;
   white-space: nowrap; */
-  @media screen and (max-width: 766px) {
+  
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
