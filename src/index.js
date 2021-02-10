@@ -5,9 +5,9 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './page_selection.css';
 import PageScreen from './PageScreen';
-import Navbar from "./components/Navbar/Navbar";
-import About from "./pages/about";
-import Contact from "./pages/contact";
+// import Navbar from "./components/Navbar/Navbar";
+// import About from "./pages/about";
+// import Contact from "./pages/contact";
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 var rows = [];
@@ -102,15 +102,15 @@ function App() {
     return (
         <div className = "parent">
             <Router>
-                <Navbar/>
+                {/* <Navbar/> */}
                 {/*<About/>*/}
                 {/*<Contact/>*/}
             {/*<Switch>*/}
             {/*    <Route path='/contact-us' component={Contact} />*/}
             {/*</Switch>*/}
             <Switch>
-                <Route path='/about' component={About} />
-                <Route path='/contact-us' component={Contact} />
+                {/* <Route path='/about' component={About} />
+                <Route path='/contact-us' component={Contact} /> */}
 
                 <Route path = "/:id" component = {PageScreen}/>
                 <Route path = "/">

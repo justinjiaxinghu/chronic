@@ -37,16 +37,24 @@
     height: auto;
 }
 
-path {
-    background: transparent;
+.path1 {
+    fill: none;
+    stroke-opacity: 1;
+    stroke: black;
+    pointer-events: all;
 }
 
-.node_hover {
-    fill-opacity: 0;
+.path1:hover {
+    fill: black;
 }
 
-.node_hover:hover {
-    fill-opacity: 1;
-    fill: crimson;
-    transition: 0.3s;
+.path2 {
+    fill: none;
+    stroke-opacity: 1;
+    stroke: black;
+    pointer-events: all;
+}
+
+.path2:hover {
+    fill: black;
 }
