@@ -25468,7 +25468,7 @@ export class page2 extends Component {
                       </span>
                       <span className = "small_select_path" id = "rotate_page_3">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 4220">
-                            <g>
+                            <g onClick = {() => this.testPathClick()}>
                                 <path id="Imported Path" className = "path1"
                                         d="M 2229.42,1921.38
                                         C 2228.92,1922.37 2229.05,1922.50 2229.92,1922.00
