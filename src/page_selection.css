@@ -29,6 +29,18 @@
     height: auto;
 }
 
+.small_select_path {
+    transition: transform 0.5s linear;
+    display: inline-block;
+    position: absolute;
+    width: 35%;
+    height: auto;
+}
+
+path {
+    background: transparent;
+}
+
 .node_hover {
     fill-opacity: 0;
 }
