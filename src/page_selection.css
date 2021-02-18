@@ -31,7 +31,7 @@
 
 .small_select_path {
     transition: transform 0.5s linear;
-    display: inline-block;
+    /* display: inline-block; */
     position: absolute;
     width: 35%;
     height: auto;
@@ -39,22 +39,11 @@
 
 .path1 {
     fill: none;
-    stroke-opacity: 1;
+    stroke-opacity: 0;
     stroke: black;
     pointer-events: all;
 }
 
 .path1:hover {
-    fill: black;
-}
-
-.path2 {
-    fill: none;
-    stroke-opacity: 1;
-    stroke: black;
-    pointer-events: all;
-}
-
-.path2:hover {
     fill: black;
 }
