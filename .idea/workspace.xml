@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72057176-1adb-4fcc-8406-c49ac98b64ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/NavbarElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -75,6 +75,8 @@
       <workItem from="1612675934688" duration="10640000" />
       <workItem from="1612714604581" duration="9272000" />
       <workItem from="1612815568016" duration="391000" />
+      <workItem from="1614361011629" duration="270000" />
+      <workItem from="1614385820779" duration="267000" />
     </task>
     <servers />
   </component>
@@ -95,11 +97,13 @@
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.-60.1920.1080@0.0.1440.900" timestamp="1612688448429" />
     <state x="458" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.834/1440.-37.1920.1057@0.23.1440.834" timestamp="1612815711979" />
-    <state x="397" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1612815589509">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state x="1969" y="279" key="com.intellij.ide.util.TipDialog" timestamp="1614385822496">
+      <screen x="1440" y="-37" width="1920" height="1057" />
     </state>
     <state x="397" y="272" key="com.intellij.ide.util.TipDialog/0.0.1440.900/1440.-60.1920.1080@0.0.1440.900" timestamp="1612495511030" />
     <state x="397" y="272" key="com.intellij.ide.util.TipDialog/0.23.1440.834/1440.-37.1920.1057@0.23.1440.834" timestamp="1612815589509" />
+    <state x="397" y="273" key="com.intellij.ide.util.TipDialog/0.23.1440.836/1440.-37.1920.1057@0.23.1440.836" timestamp="1614361029336" />
+    <state x="1969" y="279" key="com.intellij.ide.util.TipDialog/0.23.1440.836/1440.-37.1920.1057@1440.-37.1920.1057" timestamp="1614385822496" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1612512374855">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

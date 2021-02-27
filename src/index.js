@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './page_selection.css';
 import PageScreen from './PageScreen';
-// import Navbar from "./components/Navbar/Navbar";
-// import About from "./pages/about";
-// import Contact from "./pages/contact";
+import Navbar from "./components/Navbar/Navbar";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 var rows = [];
@@ -99,18 +101,26 @@ const p_size = {
 }
 
 function App() {
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 3000)
+    }, [])
+
     return (
+        <>
+        {loading === false ? (
         <div className = "parent">
             <Router>
-                {/* <Navbar/> */}
+                <Navbar/>
                 {/*<About/>*/}
                 {/*<Contact/>*/}
             {/*<Switch>*/}
             {/*    <Route path='/contact-us' component={Contact} />*/}
             {/*</Switch>*/}
             <Switch>
-                {/* <Route path='/about' component={About} />
-                <Route path='/contact-us' component={Contact} /> */}
+                <Route path='/about' component={About} />
+                <Route path='/contact-us' component={Contact} />
 
                 <Route path = "/:id" component = {PageScreen}/>
                 <Route path = "/">
@@ -120,8 +130,19 @@ function App() {
             </Router>
             <p style={p_size}>Designed by Georgia Tech Nerds</p>
         </div>
-)
+        ): (
+            <div className="App">
+            <ClimbingBoxLoader
+                size={30}
+                color={"#9999ff"}
+                loading={loading}
+                />
+            </div>
+        )}
+        </>
+);
 }
+
 
 ReactDOM.render(
     <Router>
