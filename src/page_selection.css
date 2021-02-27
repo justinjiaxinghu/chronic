@@ -10,10 +10,6 @@
     max-height: 100%;
 }
 
-.ind_page_rotate {
-    transition: transform 0.5s linear;
-}
-
 .parent {
     height: 1500px;
     width: 100vw;
@@ -32,4 +28,31 @@
     margin-top: 220px;
     justify-content: center;
     display: flex;
+}
+
+.select_path {
+    transition: transform 0.5s linear;
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: auto;
+}
+
+.small_select_path {
+    transition: transform 0.5s linear;
+    /* display: inline-block; */
+    position: absolute;
+    width: 35%;
+    height: auto;
+}
+
+.path1 {
+    fill: none;
+    stroke-opacity: 0;
+    stroke: black;
+    pointer-events: all;
+}
+
+.path1:hover {
+    fill: black;
 }
