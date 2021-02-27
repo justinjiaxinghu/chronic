@@ -136,7 +136,7 @@ function App() {
                 size={30}
                 color={"#9999ff"}
                 loading={loading}
-            />
+                />
             </div>
         )}
         </>
