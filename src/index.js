@@ -137,10 +137,15 @@ function App() {
                 color={"#9999ff"}
                 loading={loading}
                 />
+                <h1 style={h_style}> Chronic </h1>
             </div>
         )}
         </>
 );
+}
+
+const h_style  = {
+    color:"#9999ff"
 }
 
 
