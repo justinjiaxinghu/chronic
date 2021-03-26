@@ -807,7 +807,7 @@ export class page2 extends Component {
                       <span className = "small_select_path" id = "rotate_svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 4220">
                                 <g onClick = {this.clickA}>
-                                    <path id="a-125-alexandria" className = "path1"
+                                    <path id="a-125-alexandria" className = "path1" stroke = "black" stroke-width = "200"
                                         d="M 696.30,2073.75
                                         C 695.30,2074.38 691.18,2074.62 687.30,2074.38
                                             683.30,2074.00 680.05,2074.25 680.05,2074.75
@@ -2051,7 +2051,7 @@ export class page2 extends Component {
                                             1381.73,1829.87 1382.23,1830.75 1381.86,1831.38 Z"  fill = "none" />
                                 </g>
                                 <g onClick = {() => this.clickB()}>
-                                    <path id="b-125-alexandria" className = "path1"
+                                    <path id="b-125-alexandria" className = "path1" stroke = "black" stroke-width = "200"
                                             d="M 2229.42,1921.38
                                             C 2228.92,1922.37 2229.05,1922.50 2229.92,1922.00
                                                 2230.80,1921.50 2231.42,1921.75 2231.42,1922.37
@@ -6788,7 +6788,7 @@ export class page2 extends Component {
                                                 3063.61,118.00 3062.36,118.37 3061.23,119.25 Z" fill = "none"/>
                                 </g>
                                 <g onClick = {() => this.clickF()}>
-                                    <path id="f-125-alexandria" className = "path1" transform = "translate(0, 20)"
+                                    <path id="f-125-alexandria" className = "path1" transform = "translate(0, 20)" stroke = "black" stroke-width = "200"
                                     d="M 1403.48,3477.00
                                     C 1401.23,3479.38 1402.86,3481.25 1407.11,3481.25
                                         1410.61,3481.25 1411.48,3480.88 1411.11,3479.00
@@ -12824,7 +12824,7 @@ export class page2 extends Component {
                                         1568.87,2112.62 1570.00,2113.38 1571.12,2114.50 Z" />
                                 </g>
                                 <g onClick = {() => this.clickG()}>
-                                    <path id="g-125-alexandria" className = "path1"
+                                    <path id="g-125-alexandria" className = "path1" stroke = "black" stroke-width = "200"
                                     d="M 3072.48,4080.88
                                     C 3073.36,4081.25 3074.49,4081.12 3074.86,4080.75
                                         3075.36,4080.38 3074.61,4080.00 3073.24,4080.12
@@ -15585,7 +15585,7 @@ export class page2 extends Component {
                                         2218.42,2003.50 2216.17,2002.75 2214.17,2005.25 Z" />
                                 </g>
                                 <g onClick = {() => this.clickF1()}>
-                                    <path id="f1-125-alexandria" className = "path1" transform = "translate(0, 20)"
+                                    <path id="f1-125-alexandria" className = "path1" transform = "translate(0, 20)" stroke = "black" stroke-width = "200"
                                     d="M 1803.51,4132.12
                                     C 1801.89,4133.75 1802.64,4141.12 1804.64,4143.12
                                         1807.64,4146.00 1811.76,4145.00 1813.14,4141.00
@@ -21965,7 +21965,7 @@ export class page2 extends Component {
                                         763.56,3022.50 760.81,3024.75 758.31,3027.50 Z" />
                                 </g>
                                 <g onClick = {() => this.clickC()}>
-                                    <path id="c-125-alexandria" className = "path1"
+                                    <path id="c-125-alexandria" className = "path1" stroke = "black" stroke-width = "200"
                                     d="M 2279.80,1724.50
                                     C 2276.92,1727.50 2253.92,1733.75 2246.30,1733.75
                                         2241.80,1733.75 2240.17,1734.25 2240.42,1735.25
@@ -29053,7 +29053,7 @@ export class page2 extends Component {
                                         2372.68,98.87 2360.31,93.00 2353.18,96.50 Z" />
                                 </g>
                                 <g onClick = {() => this.clickD()}>
-                                    <path id="d-125-alexandria" className = "path1"
+                                    <path id="d-125-alexandria" className = "path1" stroke = "black" stroke-width = "200"
                                     d="M 580.92,1735.87
                                     C 579.92,1736.88 579.79,1741.25 580.79,1741.25
                                         582.04,1741.25 585.04,1737.75 585.04,1736.38
@@ -33470,7 +33470,7 @@ export class page2 extends Component {
                                         759.06,46.12 758.81,46.37 758.81,49.38 Z" />
                                 </g>
                                 <g onClick = {() => this.clickE()}>
-                                    <path id="e-125-alexandria" className = "path1"
+                                    <path id="e-125-alexandria" className = "path1" stroke = "black" stroke-width = "200"
                                     d="M 210.02,4031.25
                                     C 209.02,4032.00 206.14,4032.50 203.77,4032.38
                                         195.89,4032.12 195.01,4032.38 195.01,4035.00
