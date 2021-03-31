@@ -9,6 +9,7 @@ import {
 import { Component } from 'react';
 import rotateButton from '../resources/rotatebutton.jpg';
 import '../util/modalformat.css'
+import PopUp from '../util/PopUp'
 
 export class page1 extends Component {
     constructor (props) {
@@ -36158,79 +36159,12 @@ export class page2 extends Component {
                         </span>
                   </div>
               </div>
-              {/* {this.state.seenA ? <PopUp toggle = {this.clickA}/> : null } */}
-              {this.state.seenA ? 
-                    <Modal dialogClassName = "custom_modal" show = {this.state.seenA} onClick = {this.clickA}>
-                        <Modal.Header closeButton>
-                            <Modal.Title>
-                                Page 126, Passage A
-                            </Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <div>
-                                <img alt = "" src = {require('../resources/p126/a-125-alexandia-right-angle.png').default}/>
-                            </div>
-                            <div>
-                                <figure>
-                                    <figcaption>Click to listen to a complex narration of this passage.</figcaption>
-                                    <audio controls>
-                                        <source src = {require('../resources/p126/125-alexandria-a-complex.mp3').default}/>
-                                    </audio>
-                                </figure>
-                                <figure>
-                                    <figcaption>Click to listen to a simple narration of this passage.</figcaption>
-                                    <audio controls>
-                                        <source src = {require('../resources/p126/125-alexandria-a-simple.mp3').default}/>
-                                    </audio>
-                                </figure>
-                            </div>
-                        </Modal.Body>
-                        <Modal.Footer>
-                            <Button variant = "secondary" onClick = {this.clickA}>
-                                Close
-                            </Button>
-                        </Modal.Footer>
-                    </Modal> : null}
-                {this.state.seenF ? 
-                <Modal dialogClassName = "custom_modal" show = {this.state.seenF} onClick = {this.seenF}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>
-                            Page 126, Passage F
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <div>
-                            <img alt = "" src = {require('../resources/p126/f-125-alexandia-up.png').default} style = {{width: "90%"}}/>
-                        </div>
-                        <div>
-                        </div>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant = "secondary" onClick = {this.clickF}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
-                </Modal> : null}
-                {this.state.seenF1 ? 
-                <Modal dialogClassName = "custom_modal" show = {this.state.seenF1} onClick = {this.seenF1}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>
-                            Page 126, Passage F1
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <div>
-                            <img alt = "" src = {require('../resources/p126/f-125-alexandia-up.png').default} style = {{width: "90%"}}/>
-                        </div>
-                        <div>
-                        </div>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant = "secondary" onClick = {this.clickF1}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
-                </Modal> : null}
+              {this.state.seenA ? <PopUp toggle = {this.clickA} imageURI = {require('../resources/p126/a-125-alexandia-right-angle.png').default} 
+                                    complexAudio = {[require('../resources/p126/125-alexandria-a-complex.mp3').default]} 
+                                    simpleAudio = {[require('../resources/p126/125-alexandria-a-simple.mp3').default]}/> : null }
+              {this.state.seenF ? <PopUp toggle = {this.clickF} imageURI = {require('../resources/p126/f-125-alexandia-up.png').default} 
+                                    complexAudio = {[require('../resources/p126/125-alexandria-f-complex.mp3').default]} 
+                                    simpleAudio = {[require('../resources/p126/125-alexandria-f-simple.mp3').default]}/> : null }
               </div>
           )
       }

@@ -1,18 +1,59 @@
 import React from 'react';
-import './popup.css';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import './modalformat.css';
 export default class PopUp extends React.Component {
+    
     handleClick = () => {
         this.props.toggle();
     }
     
     render() {
+        let complexAudioFiles = [];
+        for (let i = 0; i < this.props.complexAudio.length; i++) {
+            complexAudioFiles.push(
+                <audio controls key =  {"c" + i}>
+                    <source src = {this.props.complexAudio[i]}/>
+                </audio>
+            );
+        }
+
+        let simpleAudioFiles = [];
+        for (let i = 0; i < this.props.simpleAudio.length; i++) {
+            simpleAudioFiles.push(
+                <audio controls key =  {"s" + i}>
+                    <source src = {this.props.simpleAudio[i]}/>
+                </audio>
+            );
+        }
         return (
-            <div className = "custom_modal">
-                <div className = "custom_modal_content">
-                    <span className = "close" onClick = {this.handleClick}>&times;</span>
-                    <p>I'm a pop up lol</p>
-                </div>
-            </div> 
+            <Modal dialogClassName = "custom_modal" show = {true} onHide = {this.handleClick} onClick = {this.handleClick}>
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                        Passage View
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div>
+                        <img alt = "" src = {this.props.imageURI} style = {{maxWidth: "100%"}}/>
+                    </div>
+                    <div>
+                        <figure>
+                            <figcaption>Simple narrations of this passage.</figcaption>
+                                {simpleAudioFiles}
+                        </figure>
+                        <figure>
+                            <figcaption>Complex narrations of this passage.</figcaption>
+                                {complexAudioFiles}
+                        </figure>
+                    </div>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant = "secondary" onClick = {this.handleClick}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         )
     }
 }
