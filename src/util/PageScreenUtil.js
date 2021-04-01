@@ -731,13 +731,23 @@ export class page2 extends Component {
           this.state = {
               degrees: 0,
               seenA: false,
+              seenB: false,
+              seenC: false,
+              seenD: false,
+              seenE: false,
               seenF: false,
               seenF1: false,
+              seenG: false,
           }
 
           this.clickA = this.clickA.bind(this);
+          this.clickB = this.clickB.bind(this);
+          this.clickC = this.clickC.bind(this);
+          this.clickD = this.clickD.bind(this);
+          this.clickE = this.clickE.bind(this);
           this.clickF = this.clickF.bind(this);
           this.clickF1 = this.clickF1.bind(this);
+          this.clickG = this.clickG.bind(this);
       }
       
       handleClick() {
@@ -758,18 +768,22 @@ export class page2 extends Component {
 
       clickB() {
         console.log("clicked b");
+        this.setState({seenB : !this.state.seenB});
       }
 
       clickC() {
         console.log("clicked c");
+        this.setState({seenC : !this.state.seenC});
       }
 
       clickD() {
         console.log("clicked d");
+        this.setState({seenD : !this.state.seenD});
       }
 
       clickE() {
         console.log("clicked e");
+        this.setState({seenE : !this.state.seenE});
       }
 
       clickF() {
@@ -784,6 +798,7 @@ export class page2 extends Component {
 
       clickG() {
         console.log("clicked g");
+        this.setState({seenG: !this.state.seenG});
       }
 
   
@@ -21970,7 +21985,7 @@ export class page2 extends Component {
                                         775.06,3033.12 767.68,3022.50 764.31,3022.50
                                         763.56,3022.50 760.81,3024.75 758.31,3027.50 Z" />
                                 </g>
-                                <g onClick = {() => this.clickC()}>
+                                <g onClick = {() => this.clickD()}>
                                     <path id="c-125-alexandria" className = "path1" stroke = "black" strokeWidth = "200"
                                     d="M 2279.80,1724.50
                                     C 2276.92,1727.50 2253.92,1733.75 2246.30,1733.75
@@ -29058,7 +29073,7 @@ export class page2 extends Component {
                                         2382.31,119.50 2381.81,115.25 2377.81,108.12
                                         2372.68,98.87 2360.31,93.00 2353.18,96.50 Z" />
                                 </g>
-                                <g onClick = {() => this.clickD()}>
+                                <g onClick = {() => this.clickC()}>
                                     <path id="d-125-alexandria" className = "path1" stroke = "black" strokeWidth = "200"
                                     d="M 580.92,1735.87
                                     C 579.92,1736.88 579.79,1741.25 580.79,1741.25
@@ -36162,9 +36177,28 @@ export class page2 extends Component {
               {this.state.seenA ? <PopUp toggle = {this.clickA} imageURI = {require('../resources/p126/a-125-alexandia-right-angle.png').default} 
                                     complexAudio = {[require('../resources/p126/125-alexandria-a-complex.mp3').default]} 
                                     simpleAudio = {[require('../resources/p126/125-alexandria-a-simple.mp3').default]}/> : null }
+
+              {this.state.seenB ? <PopUp toggle = {this.clickB} imageURI = {require('../resources/p126/b-125-alexandia-up.png').default} 
+                                    complexAudio = {[require('../resources/p126/125-alexandria-b-complex.mp3').default]} 
+                                    simpleAudio = {[require('../resources/p126/125-alexandria-b-simple.mp3').default]}/> : null }
+
+              {this.state.seenC ? <PopUp toggle = {this.clickC} imageURI = {require('../resources/p126/c-125-alexandia-up.png').default} 
+                                    complexAudio = {[require('../resources/p126/125-alexandria-c-complex.mp3').default]} 
+                                    simpleAudio = {[require('../resources/p126/125-alexandria-c-simple.mp3').default]}/> : null }
+              {this.state.seenD ? <PopUp toggle = {this.clickD} imageURI = {require('../resources/p126/d-125-alexandia-up.png').default} 
+                                    complexAudio = {[require('../resources/p126/125-alexandria-d-complex.mp3').default]} 
+                                    simpleAudio = {[require('../resources/p126/125-alexandria-d-simple.mp3').default]}/> : null }
+              {this.state.seenE ? <PopUp toggle = {this.clickE} imageURI = {require('../resources/p126/e-125-alexandia-up.png').default} 
+                                    complexAudio = {[require('../resources/p126/125-alexandria-e-complexMIN.mp3').default]} 
+                                    simpleAudio = {[require('../resources/p126/125-alexandria-e-simple.mp3').default]}/> : null }
               {this.state.seenF ? <PopUp toggle = {this.clickF} imageURI = {require('../resources/p126/f-125-alexandia-up.png').default} 
                                     complexAudio = {[require('../resources/p126/125-alexandria-f-complex.mp3').default]} 
                                     simpleAudio = {[require('../resources/p126/125-alexandria-f-simple.mp3').default]}/> : null }
+              {this.state.seenG ? <PopUp toggle = {this.clickG} imageURI = {require('../resources/p126/g-125-alexandia-up.png').default} 
+                                    complexAudio = {[require('../resources/p126/125-alexandria-g-complex.mp3').default]} 
+                                    simpleAudio = {[require('../resources/p126/125-alexandria-g-simple.mp3').default]}/> : null }
+                                    
+
               </div>
           )
       }
