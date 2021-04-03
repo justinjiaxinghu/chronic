@@ -30,22 +30,43 @@ for (var i = 0; i < rows.length; i++) {
 class PageButton extends React.Component {
     render () {
         //reference this code for icon background
-            if (count == 1) { //placeholder code for page1 as proof of concept
-                return (
-                    <Card className="hoverable" bg="light" text="dark">
-                        <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
-                            <Card.Img src={require("./resources/page" + count + ".png").default} alt="Card Image"/>
-                            {/* <Card.ImgOverlay> */}
-                            <Card.Body>
-                                <Card.Title>
-                                    {"Page " + count++}
-                                </Card.Title>
-                            </Card.Body>
-                            {/* </Card.ImgOverlay> */}
-                        </Link>
-                    </Card>
-                )
+            for (; count <= 4; count++) {
+                if (count < 5) { //placeholder code for page1 as proof of concept
+                    return (
+                        <Card className="hoverable" bg="light" text="dark">
+                            <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
+                                <Card.Img src={require("./resources/page" + count + ".png").default} alt="Card Image"/>
+                                {/* <Card.ImgOverlay> */}
+                                <Card.Body>
+                                    <Card.Title>
+                                        {"Page " + count++}
+                                    </Card.Title>
+                                </Card.Body>
+                                {/* </Card.ImgOverlay> */}
+                            </Link>
+                        </Card>
+                    )
+                }
             }
+
+        // for (count = 5; count <= 8; count++) {
+        //     if (count > 6 && count < 9) { //placeholder code for page1 as proof of concept
+        //         return (
+        //             <Card className="hoverable" bg="light" text="dark">
+        //                 <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
+        //                     <Card.Img src={require("./resources/page" + count + ".png").default} alt="Card Image"/>
+        //                     {/* <Card.ImgOverlay> */}
+        //                     <Card.Body>
+        //                         <Card.Title>
+        //                             {"Page " + count++}
+        //                         </Card.Title>
+        //                     </Card.Body>
+        //                     {/* </Card.ImgOverlay> */}
+        //                 </Link>
+        //             </Card>
+        //         )
+        //     }
+        // }
 
         return (
             <Card className = "hoverable" bg = "light" text = "dark">
