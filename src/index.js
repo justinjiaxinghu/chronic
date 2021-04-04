@@ -30,8 +30,8 @@ for (var i = 0; i < rows.length; i++) {
 class PageButton extends React.Component {
     render () {
         //reference this code for icon background
-            for (; count <= 4; count++) {
-                if (count < 5) { //placeholder code for page1 as proof of concept
+            for (; count <= 7; count++) {
+                if (count < 8) { //placeholder code for page1 as proof of concept
                     return (
                         <Card className="hoverable" bg="light" text="dark">
                             <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
@@ -49,8 +49,8 @@ class PageButton extends React.Component {
                 }
             }
 
-        // for (count = 5; count <= 8; count++) {
-        //     if (count > 6 && count < 9) { //placeholder code for page1 as proof of concept
+        // for (count = 9; count <= 15; count++) {
+        //     if (count < 16) { //placeholder code for page1 as proof of concept
         //         return (
         //             <Card className="hoverable" bg="light" text="dark">
         //                 <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
