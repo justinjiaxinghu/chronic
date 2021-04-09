@@ -36174,29 +36174,29 @@ export class page2 extends Component {
                         </span>
                   </div>
               </div>
-              {this.state.seenA ? <PopUp toggle = {this.clickA} imageURI = {require('../resources/p126/a-125-alexandia-right-angle.png').default} 
-                                    complexAudio = {[require('../resources/p126/125-alexandria-a-complex.mp3').default]} 
-                                    simpleAudio = {[require('../resources/p126/125-alexandria-a-simple.mp3').default]}/> : null }
+              {this.state.seenA ? <PopUp toggle = {this.clickA} imageURI = {'http://localhost:8081/api/file/download?filename=a-125-alexandia-right-angle.png'} 
+                                    complexAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-a-complex.mp3']} 
+                                    simpleAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-a-simple.mp3']}/> : null }
 
-              {this.state.seenB ? <PopUp toggle = {this.clickB} imageURI = {require('../resources/p126/b-125-alexandia-up.png').default} 
-                                    complexAudio = {[require('../resources/p126/125-alexandria-b-complex.mp3').default]} 
-                                    simpleAudio = {[require('../resources/p126/125-alexandria-b-simple.mp3').default]}/> : null }
+              {this.state.seenB ? <PopUp toggle = {this.clickB} imageURI = {'http://localhost:8081/api/file/download?filename=b-125-alexandia-up.png'} 
+                                    complexAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-b-complex.mp3']} 
+                                    simpleAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-b-simple.mp3']}/> : null }
 
-              {this.state.seenC ? <PopUp toggle = {this.clickC} imageURI = {require('../resources/p126/c-125-alexandia-up.png').default} 
-                                    complexAudio = {[require('../resources/p126/125-alexandria-c-complex.mp3').default]} 
-                                    simpleAudio = {[require('../resources/p126/125-alexandria-c-simple.mp3').default]}/> : null }
-              {this.state.seenD ? <PopUp toggle = {this.clickD} imageURI = {require('../resources/p126/d-125-alexandia-up.png').default} 
-                                    complexAudio = {[require('../resources/p126/125-alexandria-d-complex.mp3').default]} 
-                                    simpleAudio = {[require('../resources/p126/125-alexandria-d-simple.mp3').default]}/> : null }
-              {this.state.seenE ? <PopUp toggle = {this.clickE} imageURI = {require('../resources/p126/e-125-alexandia-up.png').default} 
-                                    complexAudio = {[require('../resources/p126/125-alexandria-e-complexMIN.mp3').default]} 
-                                    simpleAudio = {[require('../resources/p126/125-alexandria-e-simple.mp3').default]}/> : null }
-              {this.state.seenF ? <PopUp toggle = {this.clickF} imageURI = {require('../resources/p126/f-125-alexandia-up.png').default} 
-                                    complexAudio = {[require('../resources/p126/125-alexandria-f-complex.mp3').default]} 
-                                    simpleAudio = {[require('../resources/p126/125-alexandria-f-simple.mp3').default]}/> : null }
-              {this.state.seenG ? <PopUp toggle = {this.clickG} imageURI = {require('../resources/p126/g-125-alexandia-up.png').default} 
-                                    complexAudio = {[require('../resources/p126/125-alexandria-g-complex.mp3').default]} 
-                                    simpleAudio = {[require('../resources/p126/125-alexandria-g-simple.mp3').default]}/> : null }
+              {this.state.seenC ? <PopUp toggle = {this.clickC} imageURI = {'http://localhost:8081/api/file/download?filename=c-125-alexandia-up.png'} 
+                                    complexAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-c-complex.mp3']} 
+                                    simpleAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-c-simple.mp3']}/> : null }
+              {this.state.seenD ? <PopUp toggle = {this.clickD} imageURI = {'http://localhost:8081/api/file/download?filename=d-125-alexandia-up.png'} 
+                                    complexAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-d-complex.mp3']} 
+                                    simpleAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-d-simple.mp3']}/> : null }
+              {this.state.seenE ? <PopUp toggle = {this.clickE} imageURI = {'http://localhost:8081/api/file/download?filename=e-125-alexandia-up.png'} 
+                                    complexAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-e-complexMIN.mp3']} 
+                                    simpleAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-e-simple.mp3']}/> : null }
+              {this.state.seenF ? <PopUp toggle = {this.clickF} imageURI = {'http://localhost:8081/api/file/download?filename=g-125-alexandia-up.png'} 
+                                    complexAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-f-complex.mp3']} 
+                                    simpleAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-f-simple.mp3']}/> : null }
+              {this.state.seenG ? <PopUp toggle = {this.clickG} imageURI = {'http://localhost:8081/api/file/download?filename=f-125-alexandia-up.png'} 
+                                    complexAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-g-complex.mp3']} 
+                                    simpleAudio = {['http://localhost:8081/api/file/download?filename=125-alexandria-g-simple.mp3']}/> : null }
                                     
 
               </div>
