@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import Scroll from './components/Scroll'
 
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
@@ -29,22 +30,44 @@ for (var i = 0; i < rows.length; i++) {
 class PageButton extends React.Component {
     render () {
         //reference this code for icon background
-        if (count == 1) { //placeholder code for page1 as proof of concept
-            return (
-                <Card className = "hoverable" bg = "light" text = "dark"> 
-                    <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>
-                        <Card.Img src = {require("./resources/page" + count + ".png").default} alt = "Card Image"/> 
-                            {/* <Card.ImgOverlay> */}                                                               
-                            <Card.Body>
-                                <Card.Title>
-                                    {"Page " + count++}
-                                </Card.Title>
-                            </Card.Body>
-                            {/* </Card.ImgOverlay> */}
-                        </Link>
-                </Card>
-            )
-        }
+            for (; count <= 7; count++) {
+                if (count < 8) { //placeholder code for page1 as proof of concept
+                    return (
+                        <Card className="hoverable" bg="light" text="dark">
+                            <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
+                                <Card.Img src={require("./resources/page" + count + ".png").default} alt="Card Image"/>
+                                {/* <Card.ImgOverlay> */}
+                                <Card.Body>
+                                    <Card.Title>
+                                        {"Page " + count++}
+                                    </Card.Title>
+                                </Card.Body>
+                                {/* </Card.ImgOverlay> */}
+                            </Link>
+                        </Card>
+                    )
+                }
+            }
+
+        // for (count = 9; count <= 15; count++) {
+        //     if (count < 16) { //placeholder code for page1 as proof of concept
+        //         return (
+        //             <Card className="hoverable" bg="light" text="dark">
+        //                 <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
+        //                     <Card.Img src={require("./resources/page" + count + ".png").default} alt="Card Image"/>
+        //                     {/* <Card.ImgOverlay> */}
+        //                     <Card.Body>
+        //                         <Card.Title>
+        //                             {"Page " + count++}
+        //                         </Card.Title>
+        //                     </Card.Body>
+        //                     {/* </Card.ImgOverlay> */}
+        //                 </Link>
+        //             </Card>
+        //         )
+        //     }
+        // }
+
         return (
             <Card className = "hoverable" bg = "light" text = "dark">
                     <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>
@@ -111,6 +134,7 @@ function App() {
         <>
         {loading === false ? (
         <div className = "parent">
+            <Scroll showBelow={250} />
             <Router>
                 <Navbar/>
                 {/*<About/>*/}
@@ -137,10 +161,15 @@ function App() {
                 color={"#9999ff"}
                 loading={loading}
                 />
+                <h1 style={h_style}> Chronic </h1>
             </div>
         )}
         </>
 );
+}
+
+const h_style  = {
+    color:"#9999ff"
 }
 
 
