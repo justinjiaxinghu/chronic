@@ -824,7 +824,7 @@ export class page2 extends Component {
                   </div>
                   <div className = "parent_image">
                       {/* need to use default for some reason, react is trying to access build version of image */}
-                      <img alt = "" src = {require('../resources/p126/page126.png').default} className = "ind_page" id = "rotate_page" style = {{width: "35%"}}/>
+                      <img alt = "" src = {'http://localhost:8081/api/file/download?filename=125-alexandria-all.png'} className = "ind_page" id = "rotate_page" style = {{width: "35%"}}/>
                       <span className = "small_select_path" id = "rotate_svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 4220">
                                 <g onClick = {this.clickA}>
