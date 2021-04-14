@@ -1,15 +1,14 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import '../page_selection.css';
 import {
     Link
   } from "react-router-dom";
 import { Component } from 'react';
 import rotateButton from '../resources/rotatebutton.jpg';
-import '../util/modalformat.css'
-import PopUp from '../util/PopUp'
+import '../util/modalformat.css';
+import PopUp from '../util/PopUp';
+import GridLoader from "react-spinners/GridLoader";
 
 export class page1 extends Component {
     constructor (props) {
@@ -738,6 +737,7 @@ export class page2 extends Component {
               seenF: false,
               seenF1: false,
               seenG: false,
+              loading: true
           }
 
           this.clickA = this.clickA.bind(this);
@@ -761,9 +761,14 @@ export class page2 extends Component {
           });
       }
 
+      handleImageLoaded = () => {
+        console.log("image loaded");
+        this.setState({loading: false});
+      }
+
       clickA() {
-          console.log("clicked a");
-          this.setState({seenA : !this.state.seenA});
+        console.log("clicked a");
+        this.setState({seenA : !this.state.seenA});
       }
 
       clickB() {
@@ -823,9 +828,10 @@ export class page2 extends Component {
                       <img alt = "" src = {rotateButton} style = {{width: "80px", height: "80px"}} onClick={() => this.handleClick()} />
                   </div>
                   <div className = "parent_image">
-                      {/* need to use default for some reason, react is trying to access build version of image */}
-                      <img alt = "" src = {require('../resources/p126/page126.png').default} className = "ind_page" id = "rotate_page" style = {{width: "35%"}}/>
-                      <span className = "small_select_path" id = "rotate_svg">
+                      {/* <ReactLoading type = {"cylon"} style = {this.state.loading ? {height : '200px', width : '200px'} : {display : 'none'}}/> */}
+                      <GridLoader size = {30} color = {"#9999ff"} loading = {this.state.loading}/>
+                      <img alt = "" src = {'http://localhost:8081/api/file/download?filename=125-alexandria-all.png'} onLoad = {this.handleImageLoaded.bind(this)} className = "ind_page" id = "rotate_page" style = {this.state.loading ? {display : 'none'} : {width: "35%"}}/>
+                      <span className = "small_select_path" id = "rotate_svg" style = {this.state.loading ? {display: 'none'} : {}}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 4220">
                                 <g onClick = {this.clickA}>
                                     <path id="a-125-alexandria" className = "path1" stroke = "black" strokeWidth = "200"
