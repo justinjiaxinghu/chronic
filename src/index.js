@@ -8,7 +8,7 @@ import PageScreen from './PageScreen';
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import GridLoader from "react-spinners/GridLoader";
 import Scroll from './components/Scroll'
 
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
@@ -156,12 +156,12 @@ function App() {
         </div>
         ): (
             <div className="App">
-            <ClimbingBoxLoader
+            <GridLoader
                 size={30}
                 color={"#9999ff"}
                 loading={loading}
                 />
-                <h1 style={h_style}> Chronic </h1>
+                <h1 style={h_style}>&nbsp;&nbsp;Chronic</h1>
             </div>
         )}
         </>

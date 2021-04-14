@@ -2,10 +2,23 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import './modalformat.css';
+import GridLoader from "react-spinners/GridLoader";
+
 export default class PopUp extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading : true
+        }
+    }
     
     handleClick = () => {
         this.props.toggle();
+    }
+
+    handleImageLoaded = () => {
+        console.log("image finisehd loading");
+        this.setState({loading : false});
     }
     
     render() {
@@ -27,6 +40,7 @@ export default class PopUp extends React.Component {
             );
         }
         return (
+            
             <Modal dialogClassName = "custom_modal" show = {true} onHide = {this.handleClick} onClick = {this.handleClick}>
                 <Modal.Header closeButton>
                     <Modal.Title>
@@ -34,8 +48,9 @@ export default class PopUp extends React.Component {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div>
-                        <img alt = "" src = {this.props.imageURI} style = {{maxWidth: "100%"}}/>
+                    <div style = {{display: 'flex', justifyContent: 'center'}}>
+                    <GridLoader size = {30} color = {"#9999ff"} loading = {this.state.loading}/>
+                        <img alt = "" src = {this.props.imageURI} onLoad = {this.handleImageLoaded.bind(this)} style = {this.state.loading ? {display : 'none'} : {maxWidth: "100%"}}/>
                     </div>
                     <div>
                         <figure>
