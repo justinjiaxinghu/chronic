@@ -146,49 +146,49 @@ export class page2 extends Component {
       }
   }
 
-  export class page4 extends Component {
-    constructor (props) {
-          super(props);
-          this.state = {
-              degrees: 0
-          }
-      }
+//   export class page4 extends Component {
+//     constructor (props) {
+//           super(props);
+//           this.state = {
+//               degrees: 0
+//           }
+//       }
       
-      handleClick() {
-          var icon = document.getElementById("rotate_button");
-          var temp = this.state.degrees - 20;
-          this.setState({degrees : temp}, function() { //ensures that state has been changed 
-              icon.style.transform = "rotate(" + this.state.degrees + "deg)";
-          })
-      }
+//       handleClick() {
+//           var icon = document.getElementById("rotate_button");
+//           var temp = this.state.degrees - 20;
+//           this.setState({degrees : temp}, function() { //ensures that state has been changed 
+//               icon.style.transform = "rotate(" + this.state.degrees + "deg)";
+//           })
+//       }
   
-      render() {
-          return (
-              <div className = "parent" style = {{margin: "20px"}}>
-                  <div style = {{marginBottom: "20px"}}>
-                      <Card className = "hoverable" bg = "light" text = "dark"> 
-                          <Link to = "/" style = {{textDecoration : "none", color : "black"}}>
-                              <Card.Body>
-                                  <Card.Title>
-                                      Back to Page Selection
-                                  </Card.Title>
-                                  <Card.Text>
-                                  </Card.Text>
-                              </Card.Body>
-                          </Link>
-                      </Card>
-                  </div>
-                  <div>
-                      <img alt = "" src = {rotateButton} style = {{width: "80px", height: "80px"}} onClick={() => this.handleClick()} />
-                  </div>
-                  <div className = "parent_image">
-                      {/* need to use default for some reason, react is trying to access build version of image */}
-                      <img alt = "" src = {require('../resources/page4.png').default} className = "ind_page" id = "rotate_button"/>
-                  </div>
-              </div>
-          )
-      }
-  }
+//       render() {
+//           return (
+//               <div className = "parent" style = {{margin: "20px"}}>
+//                   <div style = {{marginBottom: "20px"}}>
+//                       <Card className = "hoverable" bg = "light" text = "dark"> 
+//                           <Link to = "/" style = {{textDecoration : "none", color : "black"}}>
+//                               <Card.Body>
+//                                   <Card.Title>
+//                                       Back to Page Selection
+//                                   </Card.Title>
+//                                   <Card.Text>
+//                                   </Card.Text>
+//                               </Card.Body>
+//                           </Link>
+//                       </Card>
+//                   </div>
+//                   <div>
+//                       <img alt = "" src = {rotateButton} style = {{width: "80px", height: "80px"}} onClick={() => this.handleClick()} />
+//                   </div>
+//                   <div className = "parent_image">
+//                       {/* need to use default for some reason, react is trying to access build version of image */}
+//                       <img alt = "" src = {require('../resources/page4.png').default} className = "ind_page" id = "rotate_button"/>
+//                   </div>
+//               </div>
+//           )
+//       }
+//   }
 
 
   export class page5 extends Component {
@@ -724,7 +724,8 @@ export class page2 extends Component {
       }
   }
 
-  export class page126 extends Component {
+  //NOTE: THIS IS ACTUALLY PAGE 126
+  export class page4 extends Component {
     constructor (props) {
           super(props);
           this.state = {
@@ -830,7 +831,7 @@ export class page2 extends Component {
                   <div className = "parent_image">
                       {/* <ReactLoading type = {"cylon"} style = {this.state.loading ? {height : '200px', width : '200px'} : {display : 'none'}}/> */}
                       <GridLoader size = {30} color = {"#9999ff"} loading = {this.state.loading}/>
-                      <img alt = "" src = {'http://localhost:8081/api/file/download?filename=125-alexandria-all.png'} onLoad = {this.handleImageLoaded.bind(this)} className = "ind_page" id = "rotate_page" style = {this.state.loading ? {display : 'none'} : {width: "35%"}}/>
+                      <img alt = "" src = {'http://localhost:8081/api/file/download?filename=page4.png'} onLoad = {this.handleImageLoaded.bind(this)} className = "ind_page" id = "rotate_page" style = {this.state.loading ? {display : 'none'} : {width: "35%"}}/>
                       <span className = "small_select_path" id = "rotate_svg" style = {this.state.loading ? {display: 'none'} : {}}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 4220">
                                 <g onClick = {this.clickA}>
