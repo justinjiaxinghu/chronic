@@ -8,7 +8,7 @@ import PageScreen from './PageScreen';
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import GridLoader from "react-spinners/GridLoader";
 import Scroll from './components/Scroll'
 
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
@@ -28,58 +28,34 @@ for (var i = 0; i < rows.length; i++) {
 }
 
 class PageButton extends React.Component {
+
     render () {
         //reference this code for icon background
-            for (; count <= 7; count++) {
-                if (count < 8) { //placeholder code for page1 as proof of concept
-                    return (
-                        <Card className="hoverable" bg="light" text="dark">
-                            <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
-                                <Card.Img src={require("./resources/page" + count + ".png").default} alt="Card Image"/>
-                                {/* <Card.ImgOverlay> */}
-                                <Card.Body>
-                                    <Card.Title>
-                                        {"Page " + count++}
-                                    </Card.Title>
-                                </Card.Body>
-                                {/* </Card.ImgOverlay> */}
-                            </Link>
-                        </Card>
-                    )
-                }
-            }
-
-        // for (count = 9; count <= 15; count++) {
-        //     if (count < 16) { //placeholder code for page1 as proof of concept
-        //         return (
-        //             <Card className="hoverable" bg="light" text="dark">
-        //                 <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
-        //                     <Card.Img src={require("./resources/page" + count + ".png").default} alt="Card Image"/>
-        //                     {/* <Card.ImgOverlay> */}
-        //                     <Card.Body>
-        //                         <Card.Title>
-        //                             {"Page " + count++}
-        //                         </Card.Title>
-        //                     </Card.Body>
-        //                     {/* </Card.ImgOverlay> */}
-        //                 </Link>
-        //             </Card>
-        //         )
-        //     }
-        // }
-
-        return (
-            <Card className = "hoverable" bg = "light" text = "dark">
-                    <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>
-                        {/* <Card.Img src = {require("./resources/page_" + count + "_icon.png").default} alt = "Card Image"/> */}
-                        {/* <Card.ImgOverlay> */}
+        if (count <= 28) { //placeholder code for page1 as proof of concept
+            return (
+                <Card className="hoverable" bg="light" text="dark">
+                    <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
+                        <Card.Img src={'http://localhost:8081/api/file/download?filename=page' + count + '.png'} alt="Card Image"/>
                         <Card.Body>
                             <Card.Title>
                                 {"Page " + count++}
                             </Card.Title>
                         </Card.Body>
-                        {/* </Card.ImgOverlay> */}
                     </Link>
+                </Card>
+            )
+        }
+
+
+        return (
+            <Card className = "hoverable" bg = "light" text = "dark">
+                <Link to = {"/page" + count} style = {{textDecoration : "none", color : "black"}}>
+                <Card.Body>
+                    <Card.Title>
+                        {"Page " + count++}
+                    </Card.Title>
+                </Card.Body>
+                </Link>
             </Card>
         )
     }
@@ -137,11 +113,6 @@ function App() {
             <Scroll showBelow={250} />
             <Router>
                 <Navbar/>
-                {/*<About/>*/}
-                {/*<Contact/>*/}
-            {/*<Switch>*/}
-            {/*    <Route path='/contact-us' component={Contact} />*/}
-            {/*</Switch>*/}
             <Switch>
                 <Route path='/about' component={About} />
                 <Route path='/contact-us' component={Contact} />
@@ -156,12 +127,12 @@ function App() {
         </div>
         ): (
             <div className="App">
-            <ClimbingBoxLoader
+            <GridLoader
                 size={30}
                 color={"#9999ff"}
                 loading={loading}
                 />
-                <h1 style={h_style}> Chronic </h1>
+                <h1 style={h_style}>&nbsp;&nbsp;Chronic</h1>
             </div>
         )}
         </>
