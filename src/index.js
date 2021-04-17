@@ -35,7 +35,8 @@ class PageButton extends React.Component {
             return (
                 <Card className="hoverable" bg="light" text="dark">
                     <Link to={"/page" + count} style={{textDecoration: "none", color: "black"}}>
-                        <Card.Img src={'http://localhost:8081/api/file/download?filename=page' + count + '.png'} alt="Card Image"/>
+                        {/* <Card.Img src={'http://localhost:8081/api/file/download?filename=page' + count + '.png'} alt="Card Image"/> */}
+                        <Card.Img src={require('./resources/page' + count + '.png').default} alt="Card Image"/>
                         <Card.Body>
                             <Card.Title>
                                 {"Page " + count++}
