@@ -21,7 +21,7 @@ Running Chronic:
 3. Navigate to where you cloned this repository
 4. Run `npm install`
 5. Run `npm start`
-6. The app should start on `localhost:8081` automatically, if not, open a web browser and navigate to `http://localhost:8081`
+6. The app should start on `localhost:3000` automatically, if not, open a web browser and navigate to `http://localhost:3000`
 
 ## Troubleshooting
 * Images may load slowly, please be patient! 
